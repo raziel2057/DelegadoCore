@@ -12,7 +12,10 @@ import javax.ejb.Remote;
  * @author RAUL
  */
 @Remote
-public interface CajeroServicioRemote {
-    public abstract boolean deposito();
-   
+public interface CajeroServicioRemote 
+{
+    public abstract boolean deposito(String identificador, String cuenta,float monto);
+    public abstract boolean  logueo(String usuario, String clave);
+    public abstract float getSaldo(String identificador,String cuenta);
+    public abstract boolean retiro(String identificador,String cuenta,float monto);   
 }
